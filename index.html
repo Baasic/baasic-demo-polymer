@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How it's made &mdash; Baasic Web Components</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="stylesheet" href="assets/css/html5tooltips.css">
+
+        <script src="bower_components/platform/platform.js"></script>
+        <!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
+        <link rel="import" href="bower_components/baasic-login/baasic-login.html">
+        <link rel="import" href="bower_components/baasic-article/baasic-article.html">
+
+    </head>
+    <body unresolved>
+        <!--[if IE 10]>
+            <p>This is an experimental website powered by Baasic and Web Components technologies. To see it you need to upgrade your browser to a newer version.</p>
+        <![endif]-->
+
+        <div class="pager">
+            <a href="#" class="item"></a>
+            <a href="#" class="item"></a>
+            <a href="#" class="item"></a>
+            <a href="#" class="item"></a>
+        </div>
+
+        <section class="login" data-state="closed">
+            <baasic-login application="webcomponents"></baasic-login>
+        </section>
+
+        <div class="container" data-state="pull">
+            <div tabindex="0" class="[ login-toggle ] [ transition-all ]">
+                <span></span>
+            </div>
+            <header role="banner" class="[ header ] [ fadein ]">
+                <div class="row">
+                    <div class="branding group">
+                        <img class="[ logo ]" src="assets/img/baasic-logo.svg" alt="Baasic logo" />
+                        <ul class="[ smm ] [ push ]">
+                            <li><a data-tooltip="Baasic homepage" href="http://www.baasic.com"><img src="assets/img/logo-baasic.svg" alt="Baasic homepage"></a></li>
+                            <li><a data-tooltip="Follow us on Twitter" href="http://twitter.com/baasical"><img src="assets/img/logo-twitter.svg" alt="Follow us on Twitter"></a></li>
+                            <li><a data-tooltip="Baasic on GitHub" href="https://github.com/Baasic"><img src="assets/img/logo-github.svg" alt="Baasic on GitHub"></a></li>
+                        </ul>
+                    </div>
+                    <div id="heroMessage">
+                        <div class="group">
+                            <div class="copy">
+                                <baasic-article application="webcomponents" slug="site-title"></baasic-article>
+                            </div>
+                            <div class="action">
+                                <a href="#learnMore" class="[ button negative medium ] [ rounded ] [ transition-all ]">
+                                    <span>Learn more</span>
+                                    <img src="assets/img/arrow-right.svg" alt="Arrow right">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                    
+                <section class="[ section primary large ] [ fadein ]" id="learnMore">
+                    <header class="[ row ]">
+                        <h2 class="[ title large ] [ spc lrg ]">Get to know Baasic</h2>
+                        <p>If you still haven't familiarized yourself with Baasic we've prepared a <a href="http://www.baasic.com/blog/">couple of articles</a> to get you going.</p>
+                    </header>
+                    <div class="[ row ]">
+                        <article class="[ article ]">
+                            <a href="http://www.baasic.com/posts/Using-jQuery-with-Web-components/">
+                                <div class="content">
+                                    <h3 class="title">Using jQuery with Web components</h3>
+                                    <p class="summary">As we were starting to use Baasic with Web components/Polymer, one of the first challenges was integrating the existing jQuery plugins into our components. See what we have tried and how it turned out.</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="[ article ]">
+                            <a href="http://www.baasic.com/posts/What-is-Baasic/">
+                                <div class="content">
+                                    <h3 class="title">What is Baasic?</h3>
+                                    <p class="summary">Baasic is a completely modular, pluggable, scalable, secure and technology-agnostic framework extending the concept of a Backed-as-a-Service as we know it. Following this formal introduction, let's explain what is it and what problems it intends to solve in layman's terms.</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="[ article ]">
+                            <a href="http://www.baasic.com/posts/Baasic-on-the-road/">
+                                <div class="content">
+                                    <h3 class="title">Baasic on the road</h3>
+                                    <p class="summary">It is going to be a busy autumn. Baasic team is visiting a couple of local conferences, so if you are around, don't miss a chance to meet the great guys behind the great service.</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+                <section class="[ section secondary large ] [ fadein ]">
+                    <header class="[ row ]">
+                        <h2 class="[ title large ] [ spc lrg ]">Blend Baasic with Polymer</h2>
+                    </header>
+                    <div class="[ row ]">
+                        <div class="[ steps ] [ group ]">
+                            <div class="[ step step-1 ]">
+                                <div class="number">
+                                    <span>1</span>
+                                </div>
+                                <div class="content">
+                                    <h2 class="[ title ] [ spc sml ]">Build a site using your favourite platform.</h2>
+                                    <p class="[ desc ] [ spc sml ]">Baasic is platform agnostic. Build up your site using your own tools and just add Baasic!</p>
+                                </div>
+                            </div>
+                            <div class="[ step step-2 ]">
+                                <div class="number">
+                                    <span>2</span>
+                                </div>
+                                <div class="content">
+                                    <h2 class="[ title ] [ spc sml ]">Flavour it up with Baasic Components.</h2>
+                                    <p class="[ desc ] [ spc sml ]">Our premade <strong>baasic</strong> components make it really easy to give your site some dynamic content.</p>
+                                </div>
+                            </div>
+                            <div class="[ step step-3 ]">
+                                <div class="number">
+                                    <span>3</span>
+                                </div>
+                                <div class="content">
+                                    <h2 class="[ title ] [ spc sml ]">Add your content and get going!</h2>
+                                    <p class="[ desc ] [ spc sml ]">Edit your content using our in built Markdown editor, save it up and you're good to go.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="[ section primary large ] [ fadein ]">
+                    <header class="[ row ]">
+                        <p><strong>An example article</strong></h2>
+                    </header>
+                    <div class="[ row ]">
+                        <baasic-article application="webcomponents" slug="example-article"></baasic-article>
+                    </div>
+                </section>
+                <section class="[ section secondary ] [ fadein ]">
+                    <header class="[ row ]">
+                        <h2 class="[ title large ] [ spc lrg ]">Give Baasic a spin!</h2>
+                    </header>
+                    <div class="[ row ] [ spc lrg ]">
+                        <h3 class="[ spc med ]">Get involved &mdash; aquire a Baasic Guru account</h3>
+                        <p class="[ spc med ]">Aquiring a Baasic Guru account gets you a full featured Baasic app account and an opportunity to help us grow Baasic!</p>
+                        <a href="http://www.baasic.com/#subscribe" class="[ button positive medium ] [ rounded ] [ transition-all ]">
+                            <span>Become a Baasic Guru</span>
+                            <img src="assets/img/arrow-right.svg" alt="Arrow right">
+                        </a>
+                    </div>
+                </section>
+                <section class="[ section primary ] [ fadein ]">
+                    <header class="[ row ]">
+                        <h2 class="[ title large ] [ spc lrg ]">How to use Baasic Components</h2>
+                    </header>
+                    <div class="[ g split ] [ group ] [ row ]">
+                        <div class="[ spc lrg ]">
+                            <h3>Add Baasic Components to your project</h3>
+                            <p>You can easily install Baasic Components in to your project by using Bower or downloading them directly from <a
+                            href="https://github.com/baasic">GitHub</a>.</p>
+                        </div>
+                        <div class="ge">
+                            <h4 class="[ spc med ]">Install using Bower</h4>
+                            <p class="[ spc sml ]">All of the <strong>baasic-*</strong> components are publicly hosted on the Bower repository.</p>
+                            <pre><code>bower install baasic-components</code></pre>
+                        </div>
+                        <div class="ge">
+                            <h4 class="[ spc med ]">Import Baasic Components in your files</h4>
+                            <p class="[ spc sml ]">The <strong>baasic-login</strong> component gives you an authorization interface. The <strong>baasic-article</strong> component gives you the ability to create chunks of editable and publishable content.</p>
+                            <pre><code>&lt;link rel="import" href="baasic-login.html"&gt;&nbsp;<br>&lt;link rel="import" href="baasic-article.html"&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer role="contentinfo" class="[ footer ] [ fadein ]">
+                <div class="[ group ] [ row ]">
+                    <div class="content">
+                        <h3 class="[ title base fancy ] [ grey-light ] [ spc med ]">Get Involved!</h3>
+                        <ul class="[ smm ]">
+                            <li><a data-tooltip="Baasic homepage" href="http://www.baasic.com"><img src="assets/img/logo-baasic.svg" alt="Baasic homepage"></a></li>
+                            <li><a data-tooltip="Follow us on Twitter" href="http://twitter.com/baasical"><img src="assets/img/logo-twitter.svg" alt="Follow us on Twitter"></a></li>
+                            <li><a data-tooltip="Baasic on GitHub" href="https://github.com/Baasic"><img src="assets/img/logo-github.svg" alt="Baasic on GitHub"></a></li>
+                        </ul>
+                    </div>
+                    <div class="logo">
+                        <a href="http://we.are.mono-software.com" class="push" title="A Mono product"><img src="assets/img/mono.svg" alt="A Mono product"></a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="assets/js/sloth.js"></script>
+        <script src="assets/js/smoothscroll.min.js"></script>
+        <script src="assets/js/html5tooltips.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenLite.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/easing/EasePack.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/plugins/CSSPlugin.min.js"></script>
+
+        <script src="assets/js/main.js"></script>
+        
+    </body>
+</html>
