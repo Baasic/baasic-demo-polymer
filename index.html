@@ -21,7 +21,7 @@
         <!--[if IE 10]>
             <p>This is an experimental website powered by Baasic and Web Components technologies. To see it you need to upgrade your browser to a newer version.</p>
         <![endif]-->
-
+		<baasic-sessioncontrol application="webcomponents"></baasic-sessioncontrol>
         <div class="pager">
             <a href="#" class="item"></a>
             <a href="#" class="item"></a>
@@ -166,13 +166,13 @@
                         </div>
                         <div class="ge">
                             <h4 class="[ spc med ]">Install using Bower</h4>
-                            <p class="[ spc sml ]">All of the <strong>baasic-*</strong> components are publicly hosted on the Bower repository.</p>
-                            <pre><code>bower install baasic-components</code></pre>
+                            <p class="[ spc sml ]">We are continously adding new Baasic Web components to the main repository, and Bower takes care of all dependencies. To install components supporting minimal content management functionality, use:</p>
+                            <pre><code>bower install baasic-sdk-polymer-core-sessioncontrol<br>bower install baasic-sdk-polymer-membership-login<br>bower install baasic-sdk-polymer-article-module</code></pre>
                         </div>
                         <div class="ge">
                             <h4 class="[ spc med ]">Import Baasic Components in your files</h4>
-                            <p class="[ spc sml ]">The <strong>baasic-login</strong> component gives you an authorization interface. The <strong>baasic-article</strong> component gives you the ability to create chunks of editable and publishable content.</p>
-                            <pre><code>&lt;link rel="import" href="baasic-login.html"&gt;&nbsp;<br>&lt;link rel="import" href="baasic-article.html"&gt;</code></pre>
+                            <p class="[ spc sml ]"><strong>baasic-login</strong> component provides standard login interface. <strong>baasic-article</strong> component gives you the ability to create chunks of editable content and to control who can view and edit it. <strong>baasic-sessioncontrol</strong> component controls the expiration of user credentials on the client side. Internally, these components use several other low-level components (providing support for Ajax calls, CRUD operations, editing, configuration management, etc.)</p>
+                            <pre><code>&lt;link rel="import" href="bower_components/baasic-sessioncontrol.html"&gt;<br>&lt;link rel="import" href="bower_components/baasic-login.html"&gt;&nbsp;<br>&lt;link rel="import" href="bower_components/baasic-article.html"&gt;</code></pre>
                         </div>
                     </div>
                 </section>
