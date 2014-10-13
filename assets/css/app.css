@@ -15,7 +15,7 @@ body, html {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
-baasic-article /deep/ h1, h2, h3, h4, h5, h6, p {
+baasic-article /deep/ #content h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
@@ -64,43 +64,43 @@ img {
 }
 
 /* Typography */
-baasic-article /deep/ h1,
-baasic-article /deep/ h2,
-baasic-article /deep/ h3,
-baasic-article /deep/ h4,
-baasic-article /deep/ h5,
-baasic-article /deep/ h6,
+baasic-article /deep/ #content h1,
+baasic-article /deep/ #content h2,
+baasic-article /deep/ #content h3,
+baasic-article /deep/ #content h4,
+baasic-article /deep/ #content h5,
+baasic-article /deep/ #content h6,
 h1, h2, h3, h4, h5, h6 {
     font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
     color: #232728;
 }
 
-baasic-article /deep/ h1,
-baasic-article /deep/ .t-xxlarge,
+baasic-article /deep/ #content h1,
+baasic-article /deep/ #content .t-xxlarge,
 h1, .t-xxlarge {
     font-size: 3.998rem;
     line-height: 4.5rem;
 }
-baasic-article /deep/ h2,
-baasic-article /deep/ .t-xlarge ,
+baasic-article /deep/ #content h2,
+baasic-article /deep/ #content .t-xlarge ,
 h2, .t-xlarge {
     font-size: 2.827rem;
     line-height: 3.5rem;
 }
-baasic-article /deep/ h3,
-baasic-article /deep/ .t-large ,
+baasic-article /deep/ #content h3,
+baasic-article /deep/ #content .t-large ,
 h3, .t-large {
     font-size: 1.999rem;
     line-height: 2.5rem;
 }
-baasic-article /deep/ h4,
-baasic-article /deep/ .t-medium ,
+baasic-article /deep/ #content h4,
+baasic-article /deep/ #content .t-medium ,
 h4, .t-medium {
     font-size: 1.414rem;
     line-height: 1.75rem;
 }
-baasic-article /deep/ h5, h6,
-baasic-article /deep/ .t-bas,
+baasic-article /deep/ #content h5, h6,
+baasic-article /deep/ #content .t-bas,
 h5, h6, .t-base {
     font-size: 1rem;
     line-height: 1.75rem;
@@ -109,6 +109,7 @@ small {
     font-size: 0.8rem;
     line-height: 1rem;
 }
+* /deep/ strong,
 strong {
     font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
 }
@@ -117,6 +118,7 @@ ul, ol, dl {
     padding: 0;
     margin: 0;
 }
+baasic-article /deep/ #content pre,
 pre {
     background: #576063;
     border-left: 4px solid #576063; 
@@ -125,6 +127,7 @@ pre {
     padding: 0;
     text-align: left;
 }
+baasic-article /deep/ #content pre:hover,
 pre:hover {
     border-left: 4px solid #00c2e8; 
     -webkit-transition: all .2s ease-in-out;
@@ -132,17 +135,19 @@ pre:hover {
     -ms-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+baasic-article /deep/ #content code,
 code {
     display: block;
     margin: 0;
     padding: 1rem 1.5rem 1rem 1.5rem;
 }
-baasic-article /deep/ blockquote,
+baasic-article /deep/ #content blockquote,
 blockquote {
     font-family: Georgia, Times New Roman, serif;
     font-size: 1.414rem;
     line-height: 1.75rem;
     color: #999;
+    margin: 1.5rem;
 }
 p {
     color: #899497;
@@ -299,13 +304,13 @@ a:focus, a:hover {
 }
 
 /* Site */
-baasic-article /deep/ .site.title {
+baasic-article /deep/ #content .site.title {
     font-size: 6rem;
     line-height: 6rem;
     margin-bottom: 2rem;
     color: white;
 }
-baasic-article /deep/ .site.subtitle {
+baasic-article /deep/ #content .site.subtitle {
     text-transform: uppercase;
     letter-spacing: .2em;
 }
@@ -626,5 +631,20 @@ button {
 
 /* Paper overrides */
 * /deep/ #ripple {
-    color: #00c2e8;
+    color: white;
+}
+
+* /deep/ paper-button {
+    height: 2rem;
+    padding: .25rem 1rem 0 1rem;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+
+    background: #00c2e8;
+    color: white;
+    letter-spacing: .2em;
+    border-radius: 100px;
 }
