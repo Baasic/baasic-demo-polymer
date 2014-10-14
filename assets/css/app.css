@@ -1,25 +1,41 @@
-/* Fonts */
+/*------------------------------------*\
+    # Import fonts
+\*------------------------------------*/
 @import url("//fnt.webink.com/wfs/webink.css/?project=A8A67D8C-04EF-4E19-8341-BE7DBD2105E6&fonts=BA766C3D-9F83-4950-AFCD-AD9F2BF5CEAB:f=Theinhardt-Regular,008579D7-00D8-1E34-1306-843EC6BC82EA:f=Theinhardt-Light,82DA4627-8191-9CE4-706C-58F3C2615A95:f=Theinhardt-Bold,DC84A178-A66C-DB8D-5140-7E5BF64AB28F:f=Theinhardt-RegularIta,BF522E13-B921-2C59-5FD3-9D3C689FC32B:f=Theinhardt-LightIta,8B459781-89CC-B7EA-6A87-7EC561303F45:f=Theinhardt-BoldIta");
-/* Border-box */
-*, *:before, *:after {
+
+
+/*------------------------------------*\
+    # Apply Border-box to all DOM and ShadowDOM elements
+\*------------------------------------*/
+*, *:before, *:after, html /deep/ *, html /deep/ *:before, html /deep/ *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-/* Reset */
+/*------------------------------------*\
+    # Reset browser margins and paddings
+\*------------------------------------*/
 body, html {
     margin: 0;
     padding: 0;
 }
+baasic-article /deep/ #content h1,
+baasic-article /deep/ #content h2,
+baasic-article /deep/ #content h3,
+baasic-article /deep/ #content h4,
+baasic-article /deep/ #content h5,
+baasic-article /deep/ #content h6,
+baasic-article /deep/ #content p,
 h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
-baasic-article /deep/ #content h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+    margin: 0; 
 }
 
-/* Base styles */
+
+/*------------------------------------*\
+    # Base styles
+\*------------------------------------*/
+baasic-article /deep/ #content, 
 html {
     font-size: 100%;
     line-height: 1.5em;
@@ -41,7 +57,9 @@ img {
     vertical-align: middle;
 }
 
-/* Common */
+/*------------------------------------*\
+    # Common styles
+\*------------------------------------*/
 .group:after, .clearfix:after {
     content: "";
     display: table;
@@ -63,7 +81,9 @@ img {
     border-radius: 5px;
 }
 
-/* Typography */
+/*------------------------------------*\
+    # Typography
+\*------------------------------------*/
 baasic-article /deep/ #content h1,
 baasic-article /deep/ #content h2,
 baasic-article /deep/ #content h3,
@@ -73,6 +93,7 @@ baasic-article /deep/ #content h6,
 h1, h2, h3, h4, h5, h6 {
     font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
     color: #232728;
+    margin-bottom: 1rem;
 }
 
 baasic-article /deep/ #content h1,
@@ -100,19 +121,21 @@ h4, .t-medium {
     line-height: 1.75rem;
 }
 baasic-article /deep/ #content h5, h6,
-baasic-article /deep/ #content .t-bas,
+baasic-article /deep/ #content .t-base,
 h5, h6, .t-base {
     font-size: 1rem;
     line-height: 1.75rem;
 }
+html /deep/ small,
 small {
     font-size: 0.8rem;
     line-height: 1rem;
 }
-* /deep/ strong,
+html /deep/ strong,
 strong {
     font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
 }
+baasic-article /deep/ #content,
 ul, ol, dl {
     list-style: none;
     padding: 0;
@@ -140,21 +163,37 @@ code {
     display: block;
     margin: 0;
     padding: 1rem 1.5rem 1rem 1.5rem;
+    margin-bottom: .75rem;
 }
 baasic-article /deep/ #content blockquote,
 blockquote {
-    font-family: Georgia, Times New Roman, serif;
+    font-family: "Theinhardt-Light", Helvetica, Arial, sans-serif;
     font-size: 1.414rem;
     line-height: 1.75rem;
     color: #999;
-    margin: 1.5rem;
+    margin: 2rem 3rem 2rem 3rem;
+    position: relative;
+}
+baasic-article /deep/ #content blockquote::before {
+    content: '\201C';
+    font-size: 4rem;
+    position: absolute;
+    font-family: Georgia, Times, serif;
+    left: -3rem;
+    top: 1rem;
+    color: rgba(0,0,0, 0.2);
 }
 p {
     color: #899497;
 }
+baasic-article /deep/ #content p {
+    margin-bottom: .75rem;
+}
 
 
-/* Anchors */
+/*------------------------------------*\
+    # Anchors
+\*------------------------------------*/
 a {
     color: #00c2e8;
     text-decoration: none;
@@ -168,19 +207,26 @@ a:focus, a:hover {
     color: #3f4648;
 }
 
-/* Layout */
+
+/*------------------------------------*\
+    # Layout
+\*------------------------------------*/
 .row {
     max-width: 1440px;
     padding: 0 5rem 0 5rem;
     margin: 0 auto;
 }
 
-/* Position */
+/*------------------------------------*\
+    # Position styles
+\*------------------------------------*/
 .pos.rel {
     position: relative;
 }
 
-/* Micro grid */
+/*------------------------------------*\
+    # Micro grid
+\*------------------------------------*/
 .g.split .ge {
     width: 47%;
     margin-right: 3%;
@@ -204,7 +250,9 @@ a:focus, a:hover {
     margin-right: 0;
 }
 
-/* Colors */
+/*------------------------------------*\
+    # Colors
+\*------------------------------------*/
 .grey-ultralight {
   color: #dadedf;
 }
@@ -221,7 +269,9 @@ a:focus, a:hover {
   color: #3f4648;
 }
 
-/* Spacers */
+/*------------------------------------*\
+    # Spacers
+\*------------------------------------*/
 .spc.sml {
     margin-bottom: 1rem;
 }
@@ -232,7 +282,9 @@ a:focus, a:hover {
     margin-bottom: 3rem;
 }
 
-/* Container */
+/*------------------------------------*\
+    # Container
+\*------------------------------------*/
 .container {
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
@@ -249,7 +301,9 @@ a:focus, a:hover {
     transform: translateX(320px) !important;
 }
 
-/* Header */
+/*------------------------------------*\
+    # Header
+\*------------------------------------*/
 .header {
     margin-top: 0;
     padding: 5rem 0 8rem 0;
@@ -274,7 +328,9 @@ a:focus, a:hover {
 .header .overlay {
 }
 
-/* Footer */
+/*------------------------------------*\
+    # Footer
+\*------------------------------------*/
 .footer {
     padding: 7rem 0 7rem 0;
     background: url("../img/baasic-hive.svg") no-repeat center top #232728;
@@ -303,7 +359,9 @@ a:focus, a:hover {
     width: 30%;
 }
 
-/* Site */
+/*------------------------------------*\
+    # Site styles
+\*------------------------------------*/
 baasic-article /deep/ #content .site.title {
     font-size: 6rem;
     line-height: 6rem;
@@ -315,12 +373,16 @@ baasic-article /deep/ #content .site.subtitle {
     letter-spacing: .2em;
 }
 
-/* Logo */
+/*------------------------------------*\
+    # Branding
+\*------------------------------------*/
 .logo {
     width: 120px;
 }
 
-/* Titles */
+/*------------------------------------*\
+    # Titles
+\*------------------------------------*/
 .title.large {
     font-size: 4rem;
     line-height: 4rem;
@@ -338,7 +400,9 @@ baasic-article /deep/ #content .site.subtitle {
     letter-spacing: .1em;
 }
 
-/* Steps */
+/*------------------------------------*\
+    # Steps
+\*------------------------------------*/
 .steps {
     display: table;
     width: 100%;
@@ -384,16 +448,14 @@ baasic-article /deep/ #content .site.subtitle {
 .step.step-3 {
 }
 
-/* Beta */
-.beta {
-}
-
-/* Sections */
+/*------------------------------------*\
+    # Sections
+\*------------------------------------*/
 .section {
     padding: 7rem 0 7rem 0;
 }
 .section header {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 .section.primary {
 }
@@ -426,7 +488,9 @@ baasic-article /deep/ #content .site.subtitle {
 }
 
 
-/* Buttons */
+/*------------------------------------*\
+    # Buttons
+\*------------------------------------*/
 button {
     cursor: pointer;
     border: 0;
@@ -487,7 +551,9 @@ button {
     color: white;
 }
 
-/* Articles */
+/*------------------------------------*\
+    # Articles
+\*------------------------------------*/
 .article > a {
     display: block;
     position: relative;
@@ -520,7 +586,9 @@ button {
 }
 
 
-/* Pager */
+/*------------------------------------*\
+    # Pager
+\*------------------------------------*/
 .pager {
     position: fixed;
     right: 2rem;
@@ -541,7 +609,9 @@ button {
     border-color: #00c2e8;
 }
 
-/* Login */
+/*------------------------------------*\
+    # Login
+\*------------------------------------*/
 .login {
     padding: 1rem;
     width: 320px;
@@ -629,14 +699,20 @@ button {
     transform: translateX(-320px) !important;
 }
 
-/* Paper overrides */
-* /deep/ #ripple {
+/*------------------------------------*\
+    # Paper ripple override
+\*------------------------------------*/
+html /deep/ #ripple {
     color: white;
 }
 
-* /deep/ paper-button {
+
+/*------------------------------------*\
+    # Paper button override
+\*------------------------------------*/
+html /deep/ paper-button {
     height: 2rem;
-    padding: .25rem 1rem 0 1rem;
+    padding: .25rem 1.5rem 0 1.5rem;
     vertical-align: middle;
     display: inline-block;
     margin: 0;
@@ -647,4 +723,34 @@ button {
     color: white;
     letter-spacing: .2em;
     border-radius: 100px;
+}
+
+/*------------------------------------*\
+    # Paper input override
+\*------------------------------------*/
+html /deep/ paper-input[focused]::shadow .floated-label {
+    color: #00c2e8;
+}
+html /deep/ paper-input::shadow .focused-underline,
+html /deep/ paper-input::shadow .cursor {
+    background-color: #00c2e8;
+}
+html /deep/ paper-input {
+    width: auto;
+}
+
+/*------------------------------------*\
+    # Paper checkbox override
+\*------------------------------------*/
+html /deep/ paper-checkbox::shadow #ink[checked] {
+  color: #00c2e8;
+}
+html /deep/ paper-checkbox::shadow #checkbox.checked {
+  border-color: #00c2e8;
+}
+html /deep/ paper-checkbox::shadow #ink {
+  color: #b5b5b5;
+}
+html /deep/ paper-checkbox::shadow #checkbox {
+  border-color: #b5b5b5;
 }
