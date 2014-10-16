@@ -1,0 +1,28 @@
+{
+  "name": "baasic-demo-polymer",
+  "dependencies": {
+    "baasic-sessioncontrol": "http://gitserver/monosoftware/baasic-sdk-polymer-core-sessioncontrol.git#>=0.1.5",
+    "baasic-login": "http://gitserver/monosoftware/baasic-sdk-polymer-membership-login.git#>=0.1.5",
+    "baasic-article":  "http://gitserver/monosoftware/baasic-sdk-polymer-article-module.git#>=0.1.5"
+  },
+  "authors": [
+    "denis@mono-software.com",
+	"andrej@mono-software.com"
+  ],
+  "description": "Baasic Polymer demo site.",
+  "keywords": [
+    "polymer",
+    "web-components",
+    "baasic",
+    "ajax"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/monosoftware/baasic-demo-polymer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
