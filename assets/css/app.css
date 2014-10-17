@@ -42,13 +42,7 @@ html {
 }
 body {
     font-family: "Theinhardt-Regular", Helvetica, Arial, sans-serif;
-    /*background-color: #dadedf;*/
     background-color: #edefef;
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjAlIiBjeT0iMzAwcHgiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMTAwcHgiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYWRlZGYiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-    background-size: 100%;
-    background-image: -moz-radial-gradient(left 300px, #ffffff 100px, #dadedf);
-    background-image: -webkit-radial-gradient(left 300px, #ffffff 100px, #dadedf);
-    background-image: radial-gradient(left 300px, #ffffff 100px, #dadedf);
     color: #576063;
     min-width: 1024px;
 }
@@ -94,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
     color: #232728;
     margin-bottom: 1rem;
+    font-weight: normal;
 }
 
 baasic-article /deep/ #content h1,
@@ -134,6 +129,7 @@ small {
 html /deep/ strong,
 strong {
     font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
+    font-weight: normal;
 }
 baasic-article /deep/ #content,
 ul, ol, dl {
@@ -143,8 +139,7 @@ ul, ol, dl {
 }
 baasic-article /deep/ #content pre,
 pre {
-    background: #576063;
-    border-left: 4px solid #576063; 
+    background: #6d777b;
     color: #dadedf;
     margin: 0;
     padding: 0;
@@ -152,7 +147,7 @@ pre {
 }
 baasic-article /deep/ #content pre:hover,
 pre:hover {
-    border-left: 4px solid #00c2e8; 
+    background: #576063;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
@@ -160,10 +155,14 @@ pre:hover {
 }
 baasic-article /deep/ #content code,
 code {
+    font-family: "Lucida Console", Monaco, monospace;
     display: block;
     margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     padding: 1rem 1.5rem 1rem 1.5rem;
     margin-bottom: .75rem;
+    overflow: auto;
 }
 baasic-article /deep/ #content blockquote,
 blockquote {
@@ -348,10 +347,19 @@ a:focus, a:hover {
 }
 .smm li a {
     opacity: 0.5;
+    display: block;
 }
 .smm li a:hover {
     opacity: 1;
 }
+.smm li a img {
+    width: 100%;
+}
+
+/*------------------------------------*\
+    # Footer
+\*------------------------------------*/
+
 .footer .logo {
     border-top: 1px solid #899497;
     padding: 3rem 0 3rem 0;
@@ -426,6 +434,7 @@ baasic-article /deep/ #content .site.subtitle {
     padding-top: 1.5rem;
     font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
     display: inline-block;
+    font-weight: normal;
     width: 5rem;
     height: 5rem;
     border: 4px solid #b1b9bb;
@@ -485,6 +494,13 @@ baasic-article /deep/ #content .site.subtitle {
 }
 .fadedin {
     opacity: 1;
+}
+
+/* A shamefull targeting of IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   .fadein {
+        opacity: 1;
+   }
 }
 
 
@@ -718,11 +734,13 @@ html /deep/ paper-button {
     margin: 0;
     cursor: pointer;
     text-align: center;
-
-    background: #00c2e8;
-    color: white;
     letter-spacing: .2em;
     border-radius: 100px;
+    background: #b1b9bb;
+    color: white;
+}
+html /deep/ paper-button.colored {
+    background: #00c2e8;
 }
 
 /*------------------------------------*\
