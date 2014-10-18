@@ -8,10 +8,9 @@
 
 ## Install
 
-Use [Bower](http://bower.io/) do install the site and subsequently install all the components it uses:
+Chekout this repository or get the [zipped code](https://github.com/Baasic/baasic-demo-polymer/archive/master.zip), extract it to the folder of your choice and use [Bower](http://bower.io/) to install all dependencies:
 
 ```sh
-$ bower install baasic-demo-polymer
 $ bower install 
 ```
 
