@@ -1,9 +1,9 @@
 {
   "name": "baasic-demo-polymer",
   "dependencies": {
-    "baasic-sessioncontrol": "Baasic/baasic-sdk-polymer-core-sessioncontrol.git#>=0.1.5",
-    "baasic-login": "Baasic/baasic-sdk-polymer-membership-login.git#>=0.1.5",
-    "baasic-article":  "Baasic/baasic-sdk-polymer-article-module.git#>=0.1.5"
+    "baasic-sessioncontrol": "Baasic/baasic-sdk-polymer-core-sessioncontrol#>=0.1.5",
+    "baasic-login": "Baasic/baasic-sdk-polymer-membership-login#>=0.1.5",
+    "baasic-article":  "Baasic/baasic-sdk-polymer-article-module#>=0.1.5"
   },
   "description": "Baasic Polymer demo site.",
   "keywords": [
