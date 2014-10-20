@@ -15,7 +15,7 @@
   "license": "MIT",
   "homepage": "https://github.com/baasic/baasic-demo-polymer",
   "ignore": [
-    "**/.*",
+
     "node_modules",
     "bower_components",
     "test",
