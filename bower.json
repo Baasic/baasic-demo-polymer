@@ -1,9 +1,9 @@
 {
   "name": "baasic-demo-polymer",
   "dependencies": {
-    "baasic-sessioncontrol": "Baasic/baasic-sdk-polymer-core-sessioncontrol#>=0.1.5",
-    "baasic-login": "Baasic/baasic-sdk-polymer-membership-login#>=0.1.5",
-    "baasic-article":  "Baasic/baasic-sdk-polymer-article-module#>=0.1.5"
+    "baasic-sessioncontrol": "Baasic/baasic-sdk-polymer-core-sessioncontrol#^1.0.0",
+    "baasic-login": "Baasic/baasic-sdk-polymer-membership-login#^1.0.0",
+    "baasic-article":  "Baasic/baasic-sdk-polymer-article-module#^1.0.0"
   },
   "description": "Baasic Polymer demo site.",
   "keywords": [
@@ -15,7 +15,6 @@
   "license": "MIT",
   "homepage": "https://github.com/baasic/baasic-demo-polymer",
   "ignore": [
-
     "node_modules",
     "bower_components",
     "test",
