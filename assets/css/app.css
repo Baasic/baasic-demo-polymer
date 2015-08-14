@@ -1,7 +1,7 @@
 /*------------------------------------*\
     # Import fonts
 \*------------------------------------*/
-@import url("//fnt.webink.com/wfs/webink.css/?project=A8A67D8C-04EF-4E19-8341-BE7DBD2105E6&fonts=BA766C3D-9F83-4950-AFCD-AD9F2BF5CEAB:f=Theinhardt-Regular,008579D7-00D8-1E34-1306-843EC6BC82EA:f=Theinhardt-Light,82DA4627-8191-9CE4-706C-58F3C2615A95:f=Theinhardt-Bold,DC84A178-A66C-DB8D-5140-7E5BF64AB28F:f=Theinhardt-RegularIta,BF522E13-B921-2C59-5FD3-9D3C689FC32B:f=Theinhardt-LightIta,8B459781-89CC-B7EA-6A87-7EC561303F45:f=Theinhardt-BoldIta");
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
 
 /*------------------------------------*\
@@ -41,7 +41,7 @@ html {
     line-height: 1.5em;
 }
 body {
-    font-family: "Theinhardt-Regular", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     background-color: #edefef;
     color: #576063;
     min-width: 1024px;
@@ -85,7 +85,6 @@ baasic-article /deep/ #content h4,
 baasic-article /deep/ #content h5,
 baasic-article /deep/ #content h6,
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
     color: #232728;
     margin-bottom: 1rem;
     font-weight: normal;
@@ -128,7 +127,7 @@ small {
 }
 html /deep/ strong,
 strong {
-    font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: normal;
 }
 baasic-article /deep/ #content,
@@ -166,7 +165,6 @@ code {
 }
 baasic-article /deep/ #content blockquote,
 blockquote {
-    font-family: "Theinhardt-Light", Helvetica, Arial, sans-serif;
     font-size: 1.414rem;
     line-height: 1.75rem;
     color: #999;
@@ -375,6 +373,7 @@ baasic-article /deep/ #content .site.title {
     line-height: 6rem;
     margin-bottom: 2rem;
     color: white;
+    font-weight: 700;
 }
 baasic-article /deep/ #content .site.subtitle {
     text-transform: uppercase;
@@ -392,14 +391,17 @@ baasic-article /deep/ #content .site.subtitle {
     # Titles
 \*------------------------------------*/
 .title.large {
+    font-weight: 700;
     font-size: 4rem;
     line-height: 4rem;
 }
 .title.medium {
+    font-weight: 700;
     font-size: 2.827rem;
     line-height: 3.5rem;
 }
 .title.base {
+    font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
 }
@@ -432,7 +434,7 @@ baasic-article /deep/ #content .site.subtitle {
 .step .number span {
     font-size: 2.5rem;
     padding-top: 1.5rem;
-    font-family: "Theinhardt-Bold", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     display: inline-block;
     font-weight: normal;
     width: 5rem;
@@ -513,6 +515,9 @@ button {
     padding: 0;
     margin: 0;
     background: transparent;
+}
+.paper-button {
+    padding: 0 !important;
 }
 .button {
     display: inline-block;
